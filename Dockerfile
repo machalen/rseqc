@@ -11,6 +11,10 @@ MAINTAINER Magdalena Arnal <marnal@imim.es>
 
 #Install all the required packages in python
 #Scripts are in: /usr/local/bin
+
+RUN apt-get update && apt-get install --yes build-essential
+RUN apt-get update -y && apt-get install -y wget git unzip bzip2 g++ make ncurses-dev 
+RUN apt-get update && apt-get install --yes default-jdk default-jre libncurses5-dev libbz2-dev liblzma-dev libsqlite3-dev sqlite3 pigz
 RUN apt-get update \
 	&& apt-get install -y gcc \
 	&& apt-get install -y python-dev \
